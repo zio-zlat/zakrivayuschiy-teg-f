@@ -5,10 +5,89 @@
 ✦ theme-light — класс светлой темы
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ like-icon — для кнопки, оборачивающей иконку
+✦ like-icon — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+  .like-icon .core {
+    fill: var(--color-pre_icon);
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icon:hover .core {
+    fill: var(--color_like-contour);
+    transition-delay: fill 0.03s linear;
+  }
+  
+  .like-icon .main-body {
+    fill: var(--color-pre_icon);
+    transition: fill 0.3s 0.05s linear;
+  }
+  
+  .like-icon:hover .main-body {
+    fill: var(--color_like-contour);
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icon:active .core {
+    fill: var(--color_like-sparks);
+    transition-delay: fill 0.03s linear;
+  }
+  
+  .like-icon:active .main-body {
+    fill: var(--color_like-sparks);
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icon.is-liked .core {
+    fill: var(--color_like-sparks);
+    transition-delay: fill 0.03s linear;
+  }
+  
+  .like-icon.is-liked .main-body {
+    fill: var(--color_like-sparks);
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icon .contour {
+    fill: var(--color_like-contour);
+    transition: fill 0.3s 0.06s linear;
+  }
+  
+  .like-icon.is-liked .contour {
+    fill: var(--color_like-sparks);
+    transition: fill 0.1s linear;
+  }
+  
+  @keyframes heartbeat {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+  
+  .like-icon.is-liked .heart {
+    animation: heartbeat 0.3s 0.1s ease-in;
+    transform-origin: center;
+  }
+  
+  @keyframes bum-sparks {
+    from {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .like-icon.is-liked .sparks {
+    animation: bum-sparks 0.3s 0.3s ease-in;
+  }

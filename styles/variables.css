@@ -1,1 +1,21 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --inter-font: 'Inter-Variable';
+  --inter-title-weight: 'wght' 700;
+  --inter-text-weight: 'wght' 400;
+  --accent-font: 'PressStart2P-Regular';
+  --acent-color: #000;
+  --repeating-gradient-main: #d3d3d3;
+  --repeating-gradient-transparent: rgb(211 211 211 / 0);
+  --linear-gradient-first: #e7e7e7;
+  --linear-gradient-second: #1a1a1a;
+  --background-color: #fff;
+  --style_title-font: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --style_subtitle-font: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --color-stroke: #fff;
+  --transform-color: #000;
+  --color-mix: #fff;
+  --width-dialog: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
+  --color-pre_icon: #fff;
+  --color_like-contour: #000;
+  --color_like-sparks: #FF0000;
+}
